@@ -10,7 +10,7 @@ Password API provides the following features:
 * Generates a random password (GET /password)
 
 
-This API is built on NodeJS:
+This API is built on NodeJS 8:
 
 * To install dependencies: _npm install_
 * To run tests: _npm test_
