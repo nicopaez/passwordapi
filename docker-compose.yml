@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+  nginx:
+    build:
+      context: ./balancer
+      dockerfile: Dockerfile
+    links:
+      - instance1
+      - instance2
+    ports:
+      - "8080:80"
+
+  instance1:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      - PORT=5000
+    ports:
+      - "5000:5000"
+
+  instance2:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      - PORT=3000
+    ports:
+      - "3000:3000"
