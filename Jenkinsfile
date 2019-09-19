@@ -9,7 +9,12 @@ pipeline {
         pollSCM('H/5 * * * *')
     }
 
-    agent any
+    agent {
+        docker {
+            image 'node:8.9-alpine'
+            # args '-v /var/lib/jenkins/.m2:/home/obe-developer/.m2'
+        }
+    }
 
     stages {
 
