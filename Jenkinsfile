@@ -12,7 +12,7 @@ pipeline {
     agent {
         docker {
             image 'node:8.9-alpine'
-            # args '-v /var/lib/jenkins/.m2:/home/obe-developer/.m2'
+            // args '-v /var/lib/jenkins/.m2:/home/obe-developer/.m2'
         }
     }
 
