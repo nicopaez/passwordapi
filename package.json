@@ -1,6 +1,6 @@
 {
   "name": "passwordapi",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Passwordapi is a simple application developed for the training purposes",
   "main": "./lib/server.js",
   "scripts": {
